@@ -10,10 +10,17 @@ const { Pool } = require('pg');
 //   }
 // });
 
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL || 'postgresql://postgres:Lemontree1@localhost:5432/local_characters',
+//   ssl: process.env.DATABASE_URL ? true : false
+// })
+
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || 'postgresql://postgres:Lemontree1@localhost:5432/local_characters',
-  ssl: process.env.DATABASE_URL ? true : false
-})
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
