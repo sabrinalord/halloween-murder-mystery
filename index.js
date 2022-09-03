@@ -3,20 +3,12 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 const { Pool } = require('pg');
 
-const pool = (() => {
-  if (process.env.NODE_ENV !== 'production') {
-      return new Pool({
-          connectionString: process.env.DATABASE_URL,
-          ssl: false
-      });
-  } else {
-      return new Pool({
-          connectionString: process.env.DATABASE_URL,
-          ssl: {
-              rejectUnauthorized: false
-            }
-      });
-  } })();
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
