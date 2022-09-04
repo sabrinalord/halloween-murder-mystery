@@ -11,10 +11,15 @@
 
 <body>
     <div class="wrapper">
+
+      <div class="heading_container">        
+        <h1 class="dreams">Happy Halloween...</h1>
+      </div>
         <%- include ("../partials/story.ejs") %>
         <%- include ("../partials/invitation.ejs") %>
-        <div class = "character_box_wrapper">
-              <h2 class="the_characters_font">The Characters</h2>
+        
+      <section class = "character_box_wrapper">
+              <h2 class="yellow_font">The Characters</h2>
                     <div id="character_box">
                           <% results.forEach(function(r) { %>
 
@@ -29,17 +34,16 @@
                                   </div>
                                   
                                   <div class="player_details">
-                                    <h3>Player</h3>
+                                    <p>Player</p>
                                     <% if (r.player == 'available') { %>
                                       <form>
                                         <input type="text" placeholder="Enter name" id="player_name_input" name="<%= r.character %>">  
                                         <button type="submit" onClick="handleSubmit(event)" id="submit-btn">Submit</button>      
                                     </form> 
                                       <%} else { %>
-                                        <h2 class="player_name"><%= r.player %></h2>
-                                        <div> <h3>is <%= r.character%></h3></div>
+                                        <p class=".player_name"><%= r.player %></p>
                                       <% } %>
-                                       
+                                      <p>is <%= r.character%></p>
                                   </div>
 
 
@@ -47,8 +51,7 @@
                         <% }); %>
 
                     </div> 
-          
-       </div>
+      </section>
     </div>
 </body>
 </html>
