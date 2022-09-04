@@ -36,8 +36,9 @@
                                   <div class="player_details">
                                     <p>Player</p>
                                     <% if (r.player == 'available') { %>
-                                      <form>
-                                        <input type="text" placeholder="Enter name" id="player_name_input" name="<%= r.character %>">  
+                                      <form method="POST" action="/characters/<%= r.id %>"> 
+                                        <input type="hidden" name="_method" value="PUT">
+                                        <input type="text" placeholder="Enter name" name="<%= r.character %>">  
                                         <button type="submit" onClick="handleSubmit(event)" id="submit-btn">Submit</button>      
                                     </form> 
                                       <%} else { %>

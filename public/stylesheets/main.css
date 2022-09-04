@@ -15,9 +15,6 @@ body {
     max-width:400px;
 }
 
-p { 
-    color:white;
-}
 
 .heading_container{
   padding-bottom: 30px;
@@ -43,6 +40,7 @@ p {
 
 section {
   margin-top: 4em;
+  color:white;
 }
 
 .eightbit_box_invitation_wrapper{
@@ -141,6 +139,7 @@ span.invite_inner{
 
 form {
   margin-bottom:10px;
+  color:black;
 }
 
 button {
