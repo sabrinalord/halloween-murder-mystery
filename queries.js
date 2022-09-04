@@ -1,8 +1,19 @@
 const { Pool } = require('pg');
+
+// use below to test on local
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL || 'postgresql://postgres:Lemontree1@localhost:5432/local_characters',
+//   ssl: process.env.DATABASE_URL ? true : false
+// })
+
+// use below for production
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || 'postgresql://postgres:Lemontree1@localhost:5432/local_characters',
-  ssl: process.env.DATABASE_URL ? true : false
-})
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
 
 const getCharacters = async ( request, response ) => {
     try {
