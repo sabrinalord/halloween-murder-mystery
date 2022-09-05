@@ -12,7 +12,7 @@ body {
 }
 
 p {
-  font-size:22px;
+  font-size:24px;
 }
 
 .heading_container{
@@ -122,8 +122,6 @@ span.invite_inner{
 
   span.player_name{
     color:#FFFD54;
-    font-size: 18px;
-
   }
 
 
