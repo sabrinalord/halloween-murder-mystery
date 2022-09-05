@@ -11,10 +11,9 @@ body {
     margin:2em;
 }
 
-.wrapper{
-    max-width:400px;
+p {
+  font-size:16px;
 }
-
 
 .heading_container{
   padding-bottom: 30px;
@@ -60,7 +59,6 @@ section {
 
 .eightbit_box_invitation p {
     font-family: 'Press Start 2P';
-    font-size: 10px;
     line-height:17px;
     color:black;
 }
@@ -75,7 +73,7 @@ span.invite_inner{
 
   .yellow_font{
     font-family: 'Press Start 2P';
-    font-size: 22px;
+    font-size: 30px;
     color:#FFFD54;
     text-align:center;
     text-transform: uppercase;
@@ -104,31 +102,27 @@ span.invite_inner{
   .card_inner{
     display:flex;
     align-items:center;
-    font-size:12px;
   }
 
 /* character card font  */
 
   .character_card {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size:15px;
   }
 
   .character_description{
-    font-size: 12px;
     color:white;
   }
 
   .player_details {
     text-align:center;
     color:white;
-    font-size: 10px;
     font-family: 'Press Start 2P';
   }
 
   .player_name{
     color:#FFFD54;
-    font-size: 14px;
+    font-size: 18px;
 
   }
 
