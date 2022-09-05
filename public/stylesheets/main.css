@@ -12,18 +12,23 @@ body {
 }
 
 p {
-  font-size:24px;
+  font-size:26px;
 }
 
 .heading_container{
-  padding-bottom: 30px;
+  padding-bottom: 5em;
+    text-align: center;
+}
+
+.heading{
+  margin-bottom:1.5em;
 }
 
 /* FONTS */
 
 .dreams {
   font-family: 'Mr Dafoe', cursive;
-  font-size: 50px;
+  font-size: 100px;
   color: #F975F7 ;
   transform:rotate(-15deg);
   -ms-transform:rotate(-15deg); /* IE 9 */
@@ -40,6 +45,12 @@ p {
 section {
   margin-top: 4em;
   color:white;
+}
+
+.story_wrapper {
+  text-align:center;
+  font-family: monospace;
+
 }
 
 .eightbit_box_invitation_wrapper{
@@ -59,8 +70,10 @@ section {
 
 .eightbit_box_invitation p {
     font-family: 'Press Start 2P';
-    line-height:17px;
+    line-height:35px;
     color:black;
+    margin: 1em;
+
 }
 
 span.invite_inner{
@@ -96,7 +109,7 @@ span.invite_inner{
 
   .photo_box img{
       max-width:300px;
-      margin-right:1em;
+      margin:1.5em;
   }
 
   .card_inner{
@@ -112,6 +125,8 @@ span.invite_inner{
 
   .character_description{
     color:white;
+    font-family: monospace;
+
   }
 
   .player_details {

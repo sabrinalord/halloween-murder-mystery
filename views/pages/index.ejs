@@ -13,13 +13,13 @@
     <div class="wrapper">
 
       <div class="heading_container">        
-        <h1 class="dreams">Happy Halloween...</h1>
+        <h1 class="dreams">80s Murder Mystery</h1>
       </div>
         <%- include ("../partials/story.ejs") %>
         <%- include ("../partials/invitation.ejs") %>
         
       <section class = "character_box_wrapper">
-              <h2 class="yellow_font">The Characters</h2>
+              <h2 class="yellow_font heading">The Characters</h2>
                     <div id="character_box">
                           <% results.forEach(function(r) { %>
 
@@ -45,7 +45,7 @@
                                       <p> is <%= r.character%></p>
 
                                       <%} else { %>
-                                        <p>Player <span class="player_name"><%= r.player %></span> is <%= r.character%></p>
+                                        <p class ="player_info">Player <span class="player_name"><%= r.player %></span> is <%= r.character%></p>
                                         
                                       <% } %>
                                   </div>
