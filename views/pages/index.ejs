@@ -26,7 +26,7 @@
                               <div class="character_card">
                                   <div class="card_inner">
                                           <div class="photo_box"> 
-                                              <img src="<%= r.imageurl %>">                    
+                                              <img src="/characters<%= r.imageurl %>">                    
                                           </div>
                                           <p class="character_description">
                                             <%= r.description%> 
@@ -36,10 +36,10 @@
                                   <div class="player_details">
                                     <p>Player</p>
                                     <% if (r.player == 'available') { %>
-                                      <form method="POST" action="/characters/<%= r.id %>"> 
+                                      <form action="/characters/<%= r.id %>" method="POST">
                                         <input type="hidden" name="_method" value="PUT">
-                                        <input type="text" placeholder="Enter name" name="<%= r.character %>">  
-                                        <button type="submit" onClick="handleSubmit(event)" id="submit-btn">Submit</button>      
+                                        <input type="text" placeholder="Enter name" name="player"">  
+                                        <button type="submit" id="submit-btn">Submit</button>      
                                     </form> 
                                       <%} else { %>
                                         <p class=".player_name"><%= r.player %></p>

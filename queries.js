@@ -1,12 +1,12 @@
 const { Pool } = require('pg');
 
-// use below to test on local
+// // use below to test on local
 // const pool = new Pool({
 //   connectionString: process.env.DATABASE_URL || 'postgresql://postgres:Lemontree1@localhost:5432/local_characters',
 //   ssl: process.env.DATABASE_URL ? true : false
 // })
 
-// use below for production
+// // use below for production
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
@@ -40,27 +40,31 @@ const getCharacterById = (request, response) => {
 
   const updateCharacter = (request, response) => {
     const id = parseInt(request.params.id)
-    const { character, player } = request.body
-    console.log(character)
-    console.log(player)
-    console.log(id)
-  
+    const player = request.body.player
+
+   
     pool.query(
-      'UPDATE characters SET player = $2 WHERE character = $1',
-      [character, player],
+      'UPDATE characters SET player = $2 WHERE id = $1',
+      [id, player],
       (error, results) => {
+
         if (error) {
-          throw error
-        }
-        response.status(200).send(`character ${id} modified with player: ${player}`)
+          return response.status(500).send({error: "Problem with updating the record"})
+        };
+        getCharacters(request, response)
       }
     )
   }
 
   const createCharacter = (request, response) => {
-    const { character, player } = request.body
+    const body = request.body
+    const character = body.character
+    const player = body.player
+    const imageurl = body.imageurl
+    const description = body.description
+    console.log(character, player, imageurl, description)
   
-    pool.query('INSERT INTO characters (character, player) VALUES ($1, $2)', [character, player], (error, results) => {
+    pool.query('INSERT INTO characters (character, player, imageurl, description) VALUES ($1, $2, $3, $4)', [character, player, imageurl, description], (error, results) => {
       if (error) {
         throw error
       }
