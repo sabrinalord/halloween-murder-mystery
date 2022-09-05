@@ -73,7 +73,7 @@ span.invite_inner{
 
   .yellow_font{
     font-family: 'Press Start 2P';
-    font-size: 30px;
+    font-size: 50px;
     color:#FFFD54;
     text-align:center;
     text-transform: uppercase;
@@ -120,7 +120,7 @@ span.invite_inner{
     font-family: 'Press Start 2P';
   }
 
-  .player_name{
+  span.player_name{
     color:#FFFD54;
     font-size: 18px;
 
