@@ -1,6 +1,6 @@
 const { Pool } = require('pg');
 
-// // use below to test on local
+// use below to test on local
 // const pool = new Pool({
 //   connectionString: process.env.DATABASE_URL || 'postgresql://postgres:Lemontree1@localhost:5432/local_characters',
 //   ssl: process.env.DATABASE_URL ? true : false

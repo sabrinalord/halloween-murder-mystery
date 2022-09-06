@@ -113,8 +113,7 @@ span.invite_inner{
       display:flex;
       flex-direction:column;
       margin:1em;
-      max-width: 450px;
-    min-width: 450px;
+      width:700px
   }
 
   .photo_box{
@@ -198,5 +197,8 @@ button {
   }
   .eightbit_box_invitation p {
     line-height: 24px;
+  }
+  .character_card {
+    width:500px
   }
 }
