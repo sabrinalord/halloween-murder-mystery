@@ -122,8 +122,8 @@ span.invite_inner{
   }
 
   .photo_box img{
-    min-width: 100px;
-    max-width: 150px;
+    min-width: 150px;
+    max-width: 200px;
       margin:1.5em;
   }
 
