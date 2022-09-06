@@ -20,7 +20,7 @@
         
       <section class = "character_box_wrapper">
               <h2 class="yellow_font heading">The Characters</h2>
-                    <div id="character_box">
+                    <div class="character_box">
                           <% results.forEach(function(r) { %>
 
                               <div class="character_card">
@@ -42,7 +42,7 @@
                                         <input type="text" placeholder="Enter name" name="player"">  
                                         <button type="submit" id="submit-btn">Submit</button>      
                                     </form> 
-                                      <p> is <%= r.character%></p>
+                                      <p class="form_character"> is <%= r.character%></p>
 
                                       <%} else { %>
                                         <p class ="player_info">Player <span class="player_name"><%= r.player %></span> is <%= r.character%></p>

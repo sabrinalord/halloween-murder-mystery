@@ -11,6 +11,13 @@ body {
     margin:4em;
 }
 
+.wrapper {
+  max-width:1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 p {
   font-size:26px;
 }
@@ -53,10 +60,15 @@ section {
 
 }
 
+.story_wrapper p {
+  font-size:28px;
+}
+
 .eightbit_box_invitation_wrapper{
     background-color: #FFFFFF;
     padding:0.5em;
     box-shadow: 5px 5px #777777;
+    max-width:700px;
 }
 
 .eightbit_box_invitation{
@@ -66,6 +78,7 @@ section {
     border-right: 2px solid #B12918;
     padding-left:0.5em;
     padding-right:0.5em;
+  
 }
 
 .eightbit_box_invitation p {
@@ -100,6 +113,8 @@ span.invite_inner{
       display:flex;
       flex-direction:column;
       margin:1em;
+      max-width: 450px;
+    min-width: 450px;
   }
 
   .photo_box{
@@ -108,20 +123,18 @@ span.invite_inner{
   }
 
   .photo_box img{
-      max-width:300px;
+    min-width: 100px;
+    max-width: 150px;
       margin:1.5em;
   }
 
   .card_inner{
     display:flex;
     align-items:center;
+    height: 200px;
   }
 
 /* character card font  */
-
-  .character_card {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
 
   .character_description{
     color:white;
@@ -133,22 +146,57 @@ span.invite_inner{
     text-align:center;
     color:white;
     font-family: 'Press Start 2P';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
   }
 
   span.player_name{
     color:#FFFD54;
   }
 
-
-#celebrityName {
-    margin-top:1em;
+.form_character{
+  padding-bottom:1em;
 }
-
 form {
   margin-bottom:10px;
   color:black;
 }
 
+input {
+  padding-left: 1em;
+}
+
+input, button {
+  min-height: 40px;
+  font-size: 18px;
+}
 button {
   color: blue;
+    background-color: yellow;
+}
+
+
+/* desktop media queries */
+
+@media only screen and (min-width: 800px) {
+  .character_box {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  p {
+    font-size: 12px;
+  }
+  input, button {
+    min-height: 20px;
+    font-size: 10px;
+  }
+  .story_wrapper p {
+    font-size: 16px;
+  }
+  .eightbit_box_invitation p {
+    line-height: 24px;
+  }
 }
