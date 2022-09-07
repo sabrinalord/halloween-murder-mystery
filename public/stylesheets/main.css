@@ -109,10 +109,10 @@ span.invite_inner{
 
   .character_card{
       background-color: blue;
-      padding:0.5em;
+      padding: 1.5em;
       display:flex;
       flex-direction:column;
-      margin:1em;
+      margin-bottom: 2em;
       width:750px
   }
 
@@ -123,12 +123,13 @@ span.invite_inner{
 
   .photo_box img{
     height:200px;
-    margin:1.5em;
+    margin-right:1em;
   }
 
   .card_inner{
     display:flex;
     align-items:center;
+    margin-bottom: 2em;
   }
 
 /* character card font  */
