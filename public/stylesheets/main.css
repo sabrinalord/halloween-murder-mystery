@@ -122,14 +122,14 @@ span.invite_inner{
   }
 
   .photo_box img{
-    height:200px;
+    height:250px;
     margin-right:1em;
   }
 
   .card_inner{
     display:flex;
     align-items:center;
-    margin-bottom: 2em;
+    margin-bottom: 1.2em;
   }
 
 /* character card font  */
