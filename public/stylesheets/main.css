@@ -129,7 +129,6 @@ span.invite_inner{
   .card_inner{
     display:flex;
     align-items:center;
-    height: 300px;
   }
 
 /* character card font  */
@@ -147,7 +146,6 @@ span.invite_inner{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100px;
   }
 
   span.player_name{
