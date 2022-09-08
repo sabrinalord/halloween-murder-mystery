@@ -20,6 +20,7 @@ body {
 
 p, li {
   font-size:30px;
+  list-style: none
 }
 
 .heading_container{
@@ -195,7 +196,7 @@ button {
     flex-wrap: wrap;
     justify-content: center;
   }
-  p {
+  p, li {
     font-size: 12px;
   }
   input, button {
