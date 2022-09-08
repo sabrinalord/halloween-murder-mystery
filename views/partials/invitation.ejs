@@ -1,19 +1,33 @@
 
 <section class = "eightbit_box_invitation_wrapper">
   <div class = "eightbit_box_invitation">
-      <p>HEY, <br>
-          <span class="invite_inner">
-          <br>
-          I'm having a party to celebrate mine and Tom's little movie. <br>
-          <br>
-          It's Halloween so come in costume as your most FAMOUS selves only please. 
-          <br>
-          <br>
-      </span>
-          Be there or be SQUARE,<br>
-          Sandrine 
-          <br>
-          x
+
+      <p id="invite_text">
           </p>
+        <div class = "sandrine_image_wrapper">
+          <img class="sandrine_invite" src="/characters/images/sandrine_invite.png"> 
+        </div>
+
   </div>
 </section>
+
+<script>
+  let i = 0;
+  let invite = 
+  ` HEY,                                                   
+   I'm having a Halloween party to celebrate mine and Tom's little movie...          
+   Come in costume as your most FAMOUS selves only please!                
+   Be there or be square,        
+   Sandrine`
+  console.log()
+  let speed = 50;
+
+  function typeWriter() {
+    
+    if (i < invite.length) {
+      document.getElementById('invite_text').innerHTML += invite.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+</script>

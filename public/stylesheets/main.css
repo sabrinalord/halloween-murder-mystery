@@ -12,7 +12,7 @@ body {
 }
 
 .wrapper {
-  max-width:1400px;
+  max-width:1800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,6 +62,7 @@ section {
 
 .story_wrapper p {
   font-size:28px;
+  z-index:5;
 }
 
 .eightbit_box_invitation_wrapper{
@@ -69,7 +70,9 @@ section {
     padding:0.5em;
     box-shadow: 5px 5px #777777;
     max-width:700px;
+    position:relative;
 }
+
 
 .eightbit_box_invitation{
     border-top: 1px solid #B12918;
@@ -78,7 +81,14 @@ section {
     border-right: 2px solid #B12918;
     padding-left:0.5em;
     padding-right:0.5em;
-  
+    display: flex;
+   
+}
+
+.sandrine_image img{
+position: absolute;
+right: 0px;
+top: -60px;
 }
 
 .eightbit_box_invitation p {
@@ -86,6 +96,8 @@ section {
     line-height:35px;
     color:black;
     margin: 1em;
+    font-size:22px;
+    z-index: 5;
 
 }
 
@@ -197,6 +209,8 @@ button {
     line-height: 24px;
   }
   .character_card {
-    width:600px;
+    width:500px;
+    margin: 1.2em;
   }
+  
 }

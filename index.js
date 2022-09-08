@@ -4,13 +4,14 @@ const PORT = process.env.PORT || 5000
 const db = require('./queries')
 const bodyparser = require('body-parser')
 const cors = require('cors')
-
+var favicon = require('serve-favicon');
 
 express()
   .use(cors())
   .use(bodyparser.json())
   .use(bodyparser.urlencoded({ extended: true }))
   .use(express.static(path.join(__dirname, 'public')))
+  .use(favicon(path.join(__dirname,'public','favicon.ico')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', db.getCharacters)
