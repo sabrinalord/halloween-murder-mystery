@@ -16,10 +16,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: monospace;
 }
 
-p, li {
+p {
   font-size:30px;
+}
+
+li {
   list-style: none
 }
 
@@ -55,13 +59,11 @@ section {
   color:white;
 }
 
-.story_wrapper, .info {
+.section_wrapper {
   text-align:center;
-  font-family: monospace;
-
 }
 
-.story_wrapper p, li {
+.section_wrapper p, li, p {
   font-size:28px;
   z-index:5;
 }
