@@ -198,8 +198,8 @@ button {
     flex-wrap: wrap;
     justify-content: center;
   }
-  p, li {
-    font-size: 22px;
+  .section_wrapper p, li, p{
+    font-size: 20px;
   }
   input, button {
     min-height: 20px;
