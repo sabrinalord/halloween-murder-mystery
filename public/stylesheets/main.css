@@ -199,7 +199,7 @@ button {
     justify-content: center;
   }
   .section_wrapper p, li, p{
-    font-size: 20px;
+    font-size: 16px;
   }
   input, button {
     min-height: 20px;
